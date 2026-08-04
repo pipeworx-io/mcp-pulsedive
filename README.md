@@ -2,12 +2,14 @@
 
 Pulsedive MCP — threat-intelligence IOC enrichment (pulsedive.com)
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1209+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
+| `pulsedive_indicator` | Is this IP/domain/URL/hash malicious — risk score + threats. Looks up an indicator of compromise (IOC) in Pulsedive and returns its risk level, contributing risk factors, associated threats, and intel feeds. Example: pulsedive_indicator({ indicator: "8.8.8.8", _apiKey: "your-key" }) |
+| `pulsedive_explore` | Search Pulsedive threat DB with a query. Uses the Pulsedive Explore query language (boolean field filters) to find indicators matching criteria like type, risk, feed, or threat. Example: pulsedive_explore({ q: "type=domain and risk=high", limit: 20, _apiKey: "your-key" }) |
 
 ## Quick Start
 
@@ -23,7 +25,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 1209+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +49,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
