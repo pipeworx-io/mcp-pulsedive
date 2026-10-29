@@ -1,0 +1,48 @@
+[
+  {
+    "name": "pulsedive_indicator",
+    "description": "Is this IP/domain/URL/hash malicious — risk score + threats. Looks up an indicator of compromise (IOC) in Pulsedive and returns its risk level, contributing risk factors, associated threats, and intel feeds. Example: pulsedive_indicator({ indicator: \"8.8.8.8\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "indicator": {
+          "type": "string",
+          "description": "The IOC to look up — an IP, domain, URL, or file hash. e.g. \"1.2.3.4\", \"example.com\", \"http://bad.tld/x\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Pulsedive API key (free tier 50/day at pulsedive.com)"
+        }
+      },
+      "required": [
+        "indicator",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "pulsedive_explore",
+    "description": "Search Pulsedive threat DB with a query. Uses the Pulsedive Explore query language (boolean field filters) to find indicators matching criteria like type, risk, feed, or threat. Example: pulsedive_explore({ q: \"type=domain and risk=high\", limit: 20, _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "q": {
+          "type": "string",
+          "description": "Explore query, e.g. \"type=domain and risk=high\", \"ioc=*.ru and threat=emotet\""
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results to return (default 20, max 50)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Pulsedive API key"
+        }
+      },
+      "required": [
+        "q",
+        "_apiKey"
+      ]
+    }
+  }
+]
