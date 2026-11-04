@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-pulsedive",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Pulsedive MCP — threat-intelligence IOC enrichment (pulsedive.com)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "pulsedive",
     "gatewaySlug": "pulsedive",
-    "sourceHash": "v1-9a029616715eea1d091d50bb0ee5f4e69f279979e66599ba217e9b1c2d489d18",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-6f91a2811de3d6dcfbdfb67cc3d7b1de77b91b965303d2bb3292be0d9f01e799",
+    "sourceCommit": "db27387ed3ef7ec4805d465f7964a7f65f937006"
   }
 }
